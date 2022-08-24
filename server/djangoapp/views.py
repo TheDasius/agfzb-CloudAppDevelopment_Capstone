@@ -1,3 +1,8 @@
+from cgitb import html
+from multiprocessing import context
+import re
+from tkinter.messagebox import RETRY
+from urllib import request
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
@@ -15,15 +20,24 @@ logger = logging.getLogger(__name__)
 
 
 # Create your views here.
+def warmup(request):
+    context = {
+        'text': 'warmed up'
+    }
+    return render(request, 'djangoapp/warmup.html', context)
+
 
 
 # Create an `about` view to render a static about page
-# def about(request):
-# ...
+def about(request):
+    context = {}
+    return render(request, 'djangoapp/about.html', context)
 
 
 # Create a `contact` view to return a static contact page
-#def contact(request):
+def contact(request):
+    context = {}
+    return render(request, 'djangoapp/contact.html', context)
 
 # Create a `login_request` view to handle sign in request
 # def login_request(request):

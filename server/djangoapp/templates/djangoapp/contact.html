@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>About Us</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">Best Cars</a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <a class="btn btn-link" href="{% url 'djangoapp:index' %}">HomePage</a>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid pt-3 pb-3 text-center">
+            <div class="container pb-5">
+                <h1>Contact Us</h1>
+            </div>
+            <div class="container pb-5">
+                <h4 style="white-space: pre-line">
+                    Dallas Branch - 1 big car street, Dallas, TX
+                    Phone: 000-000-0000
+
+                    New York Branch - 2 rich car stree, New York, NY
+                    Phone: 000-000-0000
+
+                    SF Branch - 3 hot car rd, San Francisico, CA
+                    Phone: 000-000-0000
+                </h4>
+            </div>
+        </div>   
+    </body>
+
+    <footer class="modal-footer bg-light">
+        <a class="btn btn-link" href="{% url 'djangoapp:contact' %}">Contact Us</a>
+    </footer>
+
+</html>
