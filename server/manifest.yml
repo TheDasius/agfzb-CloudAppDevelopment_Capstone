@@ -3,7 +3,7 @@
     routes:
       - route: TheDasius.us-east.cf.appdomain.cloud
     memory: 128M
-    buildpack: python_buildpack
+    buildpack: https://github.com/TheDasius/python-buildpack.git
   - name: djangoapp-nginx
     routes:
       - route: TheDasius.us-east.cf.appdomain.cloud/static
